@@ -39,6 +39,7 @@ app.get("/mongo", async (req, res) => {
 
 app.post("/mongo", async (req, res) => {
   const mensajes = new modelo({
+    id: req.body.id,
     mensaje: req.body.mensaje,
   });
   try {
